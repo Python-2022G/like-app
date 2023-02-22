@@ -48,7 +48,7 @@ def add_like(doc_id: str, chat_id: str) -> bool:
         doc['dislikes'].remove(chat_id) 
     
     doc['likes'].append(chat_id)
-    img_table.update(doc, doc_ids=[doc_id])
+    img_table.update(doc)
     
     return True
 
@@ -74,7 +74,7 @@ def add_dislike(doc_id: str, chat_id: str) -> bool:
         doc['likes'].remove(chat_id) 
     
     doc['dislikes'].append(chat_id)
-    img_table.update(doc, doc_ids=[doc_id])
+    img_table.update(doc)
     
     return True
 
